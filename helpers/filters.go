@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 
-	r "github.com/jonhadfield/ape/root"
+	r "github.com/jonhadfield/gogland-test/root"
 )
 
 func ProcessTimeFilterValue(filter *r.Filter) (filterValue time.Time) {

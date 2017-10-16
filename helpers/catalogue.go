@@ -100,18 +100,3 @@ var CloudTrailResources Resources = []Resource{
 		Criteria: CloudTrailTrailCriteria,
 	},
 }
-
-var ImplementedServices = Services{
-	Service{
-		Name:      "iam",
-		Resources: IAMResources,
-	},
-	Service{
-		Name:      "ec2",
-		Resources: EC2Resources,
-	},
-	Service{
-		Name:      "cloudtrail",
-		Resources: CloudTrailResources,
-	},
-}

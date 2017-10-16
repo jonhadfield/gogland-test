@@ -16,12 +16,7 @@ import (
 	r "github.com/jonhadfield/gogland-test/root"
 )
 
-var severities = map[string]int64{
-	"critical": 4,
-	"high":     3,
-	"medium":   2,
-	"low":      1,
-}
+
 type EnforcePlanInput struct {
 	DryRun          bool
 	RoleArn         string

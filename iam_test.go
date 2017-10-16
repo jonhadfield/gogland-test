@@ -7,7 +7,7 @@ import (
 
 	"github.com/aws/aws-sdk-go/service/iam"
 	"github.com/aws/aws-sdk-go/service/iam/iamiface"
-	"github.com/jonhadfield/ape/root"
+	"github.com/jonhadfield/gogland-test/root"
 )
 
 type mockIAMClient struct {
