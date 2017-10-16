@@ -16,7 +16,6 @@ import (
 	r "github.com/jonhadfield/gogland-test/root"
 )
 
-
 type EnforcePlanInput struct {
 	DryRun          bool
 	RoleArn         string
@@ -178,19 +177,6 @@ func getAccessKeys(svc iamiface.IAMAPI, username string) (accessKeys []*iam.Acce
 	}
 	list, _ := svc.ListAccessKeys(&input)
 	accessKeys = list.AccessKeyMetadata
-	return
-}
-
-func enforceIAMPolicy(session *session.Session, planItem PlanItem) (result EnforcePolicyOutput, err error) {
-	_, resource, err := h.GetResourceParts(planItem.Policy.Resource)
-	switch resource {
-	case "User":
-		result, _ = EnforceUserPolicy(session, planItem)
-	case "PasswordPolicy":
-		result, _ = EnforcePasswordPolicy(session, planItem)
-	default:
-		err = fmt.Errorf("unhandled resource: iam:%s", resource)
-	}
 	return
 }
 
